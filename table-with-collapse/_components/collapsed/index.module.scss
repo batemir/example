@@ -1,0 +1,15 @@
+@import "@/styles/mixins.module.scss";
+
+.Collapsed {
+  &__cell {
+    &--hidden {
+      padding: 0;
+    }
+  }
+  &__expansion-row {
+    @include flex(space-between, $ai: flex-start, $fd: column);
+    font-size: 14px;
+    line-height: 2rem;
+    padding: 1rem;
+  }
+}

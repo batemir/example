@@ -1,0 +1,36 @@
+@import "@/styles/mixins.module.scss";
+@import "@/styles/colors.module.scss";
+
+.Row {
+  --border-radius: 4px;
+  background-color: transparent;
+  display: table-row;
+  font-size: 14px;
+  transition: background-color 1s;
+  cursor: pointer;
+  
+  &:first-child {
+    border-top: none;
+  }
+
+  &--with-border {
+    border-top: 1px solid #f2f2f2;
+  }
+
+  &__cell {
+    &--expanded {
+      background-color: $GreyColor200;
+      &:first-child {
+        border-radius: var(--border-radius) 0 0 var(--border-radius);
+      }
+
+      &:last-child {
+        border-radius: 0 var(--border-radius) var(--border-radius) 0;
+      }
+    }
+  }
+
+  &__icon {
+    margin-right: 8px;
+  }
+}
